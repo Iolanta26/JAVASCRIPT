@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+#light-bulbs {
+  top: 200px;
+  left: 500px;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+
+.bulb {
+  /* position: absolute; */
+  height: 40px;
+  width: 40px;
+  background: green;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50px;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  -o-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+}
+
+.bulb.chosen {
+  background: red;
+}
+
+.bulb.active {
+  background-color: yellow;
+}
+
+input {
+  background: red;
+  padding: 10px;
+  margin: 100px 0px 400px 450px;
+}

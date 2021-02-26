@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car registration</title>
+    <link rel="stylesheet" href="task.css" />
+  </head>
+  <body>
+    <h1>Please register your car</h1>
+    <form id="inputForm">
+      <div>
+        <label for="licence"> Licence plate number</label>
+        <input type="text" name="licence" id="licence" />
+      </div>
+      <div>
+        <label for="brand"> Car brand</label>
+        <input type="text" name="brand" id="brand" />
+      </div>
+      <div>
+        <label for="model"> Car model</label>
+        <input type="text" name="model" id="model" />
+      </div>
+      <div>
+        <label for="price"> Price </label>
+        <input type="number" name="price" id="price" />
+      </div>
+      <div>
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" />
+      </div>
+      <div>
+        <input type="submit" onclick="addCar(event)" value="Submit" />
+        <input type="reset" />
+      </div>
+    </form>
+
+    <h2>Search car by licence number</h2>
+    <form id="searchData">
+      <div>
+        <label for="licence">Licence number</label
+        ><input type="text" id="searchLicence" />
+      </div>
+      <input type="submit" value="Search" />
+    </form>
+    <p></p>
+    <p id="discount"></p>
+    <script src="task.js"></script>
+  </body>
+</html>

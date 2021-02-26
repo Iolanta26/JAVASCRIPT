@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>How much time?</title>
+  </head>
+  <body>
+    <h1>How many days left until...</h1>
+    <div>
+      <form>
+        <div>
+          <label for="eventName">What event?</label>
+          <input type="text" name="eventName" id="eventName" />
+        </div>
+        <div>
+          <label for="endDate">When is the event?</label>
+          <input type="date" name="enddate" id="endDate" />
+        </div>
+
+        <input type="button" id="endDateButton" value="CALCULATE" />
+      </form>
+      <p id="calcText"></p>
+      <form>
+        <div>
+          <label for="startDate"> Set your own start date</label>
+          <input type="date" name="startdate" id="startDate" />
+        </div>
+
+        <input type="button" id="newDateButton" value="CALCULATE" />
+      </form>
+      <p id="startDateText"></p>
+      <h3></h3>
+      <section>
+        <div class="timer">
+          <p id="day"></p>
+          <h6></h6>
+        </div>
+        <div class="timer">
+          <p id="hour"></p>
+          <p></p>
+        </div>
+        <div class="timer">
+          <p id="minute"></p>
+          <h6></h6>
+        </div>
+        <div class="timer">
+          <p id="second"></p>
+          <h6></h6>
+        </div>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

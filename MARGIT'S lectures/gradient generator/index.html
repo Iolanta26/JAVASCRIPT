@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>background Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Generate custom gradient background is easy:</h2>
+      <form>
+        <h3>At first, choose the direction:</h3>
+        <div class="direction">
+          <input
+            checked
+            type="radio"
+            name="direction"
+            id="lefttoright"
+            value="to right"
+          />
+          <label for="lefttoright"> Left to Right</label>
+        </div>
+        <div class="direction">
+          <input
+            type="radio"
+            name="direction"
+            id="righttoleft"
+            value="to left"
+          />
+          <label for="righttoleft"> Right to Left</label>
+        </div>
+        <div class="direction">
+          <input
+            type="radio"
+            name="direction"
+            id="toptobottom"
+            value="to bottom"
+          />
+          <label for="toptobottom"> Top to Bottom</label>
+        </div>
+        <div class="direction">
+          <input
+            type="radio"
+            name="direction"
+            id="bottomtoright"
+            value="to top"
+          />
+          <label for="bottomtoright"> Bottom to Top</label>
+        </div>
+        <h3>Second, choose colors:</h3>
+        <input type="color" id="color1" value="#e47a69" />
+        <input type="color" id="color2" value="#a0387f" />
+        <h3>Third, generate your gradient:</h3>
+        <input type="submit" value="Generate" />
+      </form>
+      <h3>Finally, copy your CSS code:</h3>
+      <p></p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
