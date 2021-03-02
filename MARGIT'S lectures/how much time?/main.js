@@ -12,13 +12,16 @@ function calcDays() {
   differenceInDays = differenceInTime / (1000 * 3600 * 24);
   const finalResult = differenceInDays.toFixed(0);
 
+  // Counting work days
   let workDays = Math.floor(finalResult / 7);
   const businessDays = finalResult - workDays * 2;
 
+  /// TEXTS
   document.getElementById(
     "calcText"
   ).innerHTML = `There are ${finalResult} days / ${businessDays} business days left until ${event} `;
 
+  // COUNTDOWN
   let countDownDate = new Date(eventDate).getTime();
   let x = setInterval(function () {
     let now = new Date().getTime();
