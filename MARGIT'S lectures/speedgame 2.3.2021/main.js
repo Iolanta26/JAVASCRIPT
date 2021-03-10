@@ -1,3 +1,4 @@
+////////DECLARING VARIABLES//////////
 const circles = document.querySelectorAll(".circle");
 const numberOfCircles = circles.length;
 const scoreEl = document.querySelector(".score");
@@ -5,14 +6,17 @@ const modal = document.querySelector(".modal");
 const result = document.querySelector(".result");
 const restartButton = document.querySelector(".restart_button");
 const stopButton = document.querySelector(".stop_button");
+const startButton = document.querySelector(".start_button");
+
+//// WHEN PAGE IS LOADED////
 let score = 0;
 let clearTimeoutId;
-document.querySelector(".stop_button").style.visibility = "hidden";
+stopButton.style.visibility = "hidden";
 
 const startGame = () => {
-  //// settingg visibility to start and end buttons
-  document.querySelector(".start_button").style.visibility = "hidden";
-  document.querySelector(".stop_button").style.visibility = "visible";
+  //// setting visibility to start and end buttons
+  startButton.style.visibility = "hidden";
+  stopButton.style.visibility = "visible";
   document.querySelector(".circles_container").style.cursor = "pointer";
   //pick a random circle
   let randomNumber = Math.floor(Math.random() * numberOfCircles);
@@ -33,7 +37,7 @@ const startGame = () => {
         stopGame("Sorry You Lose!!! Your Final Score is: ");
         scoreEl.textContent = `Your score is: ${score}`;
         if (score < 0) {
-          stopGame("Sorry You Lose!!! Your Final Score is: ");
+          stopGame("Sorry you lose!!! Your final score is: ");
         }
       }
     });
@@ -67,7 +71,6 @@ const startGame = () => {
 };
 
 //Event listener on start game button
-const startButton = document.querySelector(".start_button");
 startButton.addEventListener("click", () => {
   console.log("start game");
   startGame();
