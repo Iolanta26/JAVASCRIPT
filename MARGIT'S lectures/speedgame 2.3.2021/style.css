@@ -50,11 +50,11 @@ body {
 .score {
 }
 
-.circles__container {
-  width: 50%;
+.circles_container {
+  width: 90%;
   margin: 2rem auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .circle {
@@ -62,7 +62,8 @@ body {
   height: 10rem;
   border-radius: 50%;
   background: #f3f3f3;
-  cursor: pointer;
+  /* cursor: pointer; */
+  margin: 1rem;
 }
 
 .circle.active {
@@ -70,10 +71,10 @@ body {
   outline: none;
 }
 
-.start__button,
-.stop__button,
-.restart__button {
-  display: inline-block;
+.start_button,
+.stop_button,
+.restart_button {
+  width: 50%;
   padding: 1rem 2rem;
   background: #f3f3f3;
   cursor: pointer;
@@ -81,16 +82,25 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.start__button:hover,
-.stop__button:hover,
-.restart__button:hover {
+.start_button:hover,
+.stop_button:hover,
+.restart_button:hover {
   background: #dfdfdf;
 }
 
-.start__button:active,
-.stop__button:active,
-.restart__button:active {
+.start_button:active,
+.stop_button: :active,
+.restart_button:active {
   transform: scale(0.95);
+}
+
+.start_button {
+  align-content: center;
+  margin: 4rem 6rem 4rem 10rem;
+}
+
+.stop_button {
+  margin-right: 10rem;
 }
 
 .modal {
