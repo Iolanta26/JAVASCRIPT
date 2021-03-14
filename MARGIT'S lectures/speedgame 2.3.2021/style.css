@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   background-color: #bdc8ff;
   background-image: linear-gradient(
-    43deg,
+    85deg,
     #a8b6fd 0%,
     #ca78c5 46%,
     #fdd384 100%
@@ -67,7 +67,6 @@ h1 {
 }
 .circle.active {
   background: url("https://source.unsplash.com/NFs6dRTBgaM/240x126");
-  outline: none;
 }
 
 .start_button,

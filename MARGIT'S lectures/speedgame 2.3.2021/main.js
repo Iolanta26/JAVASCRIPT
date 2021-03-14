@@ -7,6 +7,8 @@ const result = document.querySelector(".result");
 const restartButton = document.querySelector(".restart_button");
 const stopButton = document.querySelector(".stop_button");
 const startButton = document.querySelector(".start_button");
+const gameOverSong = document.getElementById("gameOverSong");
+const gameSong = document.getElementById("gameSong");
 
 //// WHEN PAGE IS LOADED////
 let score = 0;
@@ -18,6 +20,7 @@ const startGame = () => {
   startButton.style.visibility = "hidden";
   stopButton.style.visibility = "visible";
   document.querySelector(".circles_container").style.cursor = "pointer";
+  gameSong.play();
   //pick a random circle
   let randomNumber = Math.floor(Math.random() * numberOfCircles);
   //initiate the circle
@@ -25,6 +28,7 @@ const startGame = () => {
 
   let previousNumber;
   let timer = 1000;
+  let lostGameText = `Sorry! You lose the game! Your final score is`;
 
   //if the user click on the active circle, update the score
   circles.forEach((circle) => {
@@ -34,10 +38,11 @@ const startGame = () => {
         scoreEl.textContent = `Your score is: ${score}`;
       } else {
         //user clicks on the wrong circle and game ends
-        stopGame("Sorry You Lose!!! Your Final Score is: ");
-        scoreEl.textContent = `Your score is: ${score}`;
+        gameSong.pause();
+        stopGame(lostGameText);
+        gameOverSong.play();
         if (score < 0) {
-          stopGame("Sorry you lose!!! Your final score is: ");
+          stopGame(lostGameText);
         }
       }
     });
@@ -46,7 +51,7 @@ const startGame = () => {
   const timerFunction = () => {
     //If the timer is less than 0, stop the game
     if (timer <= 0) {
-      stopGame("Sorry you lose!! Your Final Score is: ");
+      stopGame(lostGameText);
     }
     //update the timer
     timer -= 50;
@@ -87,7 +92,7 @@ const stopGame = (message) => {
 
 //stop the game
 stopButton.addEventListener("click", () => {
-  stopGame("You Stop The Game. Your Final Score is: ");
+  stopGame("You stopped the game. Your score is: ");
 });
 
 //restart the game
